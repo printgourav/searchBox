@@ -18,18 +18,18 @@ setTimeout(() => {
 */
 
 function findMatches(wordToMatch, arr){
-    return arr.filter(place => {
-        const regex = new RegExp(wordToMatch, 'gi');
-        return place.city.match(regex) || place.state.match(regex) 
+    return arr.filter(place => {  //filter for Each place aand form arrays
+        const regex = new RegExp(wordToMatch, 'gi'); //create a Regex expression thats globally and insensitive.
+        return place.city.match(regex) || place.state.match(regex)  //Return on basis of match
     });
 }
 
 
 function displayMatches(){
    // console.log(this);  here this would be searchInput
-   const matchArray = findMatches(this.value,cities) 
-   console.log(this.value);
-   console.log(...matchArray);
+   const matchArray = findMatches(this.value,cities) // Passing Arguments
+   // console.log(this.value);
+   // console.log(...matchArray);
    const html = matchArray.map(place =>{
    return `
     <li>
@@ -54,4 +54,5 @@ const suggestions = document.querySelector('.suggestions');
 searchInput.addEventListener('change', displayMatches);
 // searchInput.addEventListener('keyup', displayMatches);
 // searchInput.addEventListener('Input', wordhMatch);
+
 
