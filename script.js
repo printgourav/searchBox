@@ -1,5 +1,6 @@
 const endpoint = 'https://gist.githubusercontent.com/printgourav/454e2665818b0cdc8afbd7581f848804/raw/2153580a0ac5021a2eb0c9769b2ed0d26b8e00a1/Cities.json';
 const cities = [];
+
 fetch(endpoint)
 .then(blob => blob.json())
 .then(data => cities.push(...data));
@@ -53,3 +54,4 @@ const suggestions = document.querySelector('.suggestions');
 searchInput.addEventListener('change', displayMatches);
 // searchInput.addEventListener('keyup', displayMatches);
 // searchInput.addEventListener('Input', wordhMatch);
+
