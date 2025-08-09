@@ -1,5 +1,5 @@
 # About 
-A Simple Search Box application that suggest basis on input fetching data from an endpoint.
+A Simple Search Box application that suggest basis on input from fetched data of an API endpoint.
 # Checkout
 https://lookforuscities.netlify.app/
 # screenshot
